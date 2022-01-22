@@ -70,6 +70,7 @@ jobs:
       # this ensures that the Cypress verified status is cached too
       - run: npm run cypress:verify
       - run: npm run cypress:info
+      - run: npm run cypress:version
       - run: npm run stop-only
       - save_cache:
           key: cache-dirs-{{ .Branch }}-{{ checksum "package.json" }}-{{ checksum "circle.yml" }}
